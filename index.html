@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>APIs, APIs everywhere...</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link rel="shortcut icon" type="image/png" href="favicon.ico" />
+		<style type="text/css">
+			body {
+				font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+				font-size: 14px;
+				padding-top: 30px;
+				color: #656565;
+				background: #fafafa;
+			}
+
+			body:before { /* top shadow */ 
+				content: ""; 
+				position: fixed; 
+				top: -10px; 
+				left: -10px; 
+				width: 110%; 
+				height: 10px;  
+				box-shadow: 0px 0px 10px rgba(0,0,0,.3);  
+				z-index: 100; 
+			}
+
+			h1 {
+				position: absolute;
+				right: 20px;
+				bottom: 10px;
+				margin: 0;
+				font-size: 70px;
+				line-height: 70px;
+			}
+
+			ul { list-style-type: none; }
+			ol { padding: 0; }
+
+			pre,code {
+			    font-family:"Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+			    text-shadow: 0 0 0;
+			}
+
+			pre {
+			    padding:10px;
+			    background-color:#eee;
+			    overflow:auto;
+			    margin: 0 50px 60px 10px;
+			    border-left: solid 1px #999;
+			}
+
+			/**
+			 * Add line numbers via an `ol`.
+			 */
+			.line-numbers{
+			    list-style:decimal-leading-zero inside;
+			    margin-left:0;
+			}
+
+			/*
+			 * Set the colour of the bullets/numbers.
+			 */
+			.line-numbers{
+			    color:#eee;
+			}
+
+			/*
+			 * Make everything (back to) normal.
+			 */
+			pre,
+			.line-numbers code{
+			    color:#656565;
+			}
+
+			/*
+			 * Make comments a little paler.
+			 */
+			.code-comment,
+			.line-numbers li:hover{
+			    color:#999;
+			}
+
+			a {
+				border-radius: 3px;
+				border: 1px solid #d3d3d3;
+				display: inline-block;
+				height: 18px;
+				line-height: 18px;
+				padding: 0 8px;
+				position: relative;
+				font-size: 12px;
+				text-decoration: none;
+				margin: 10px 2px 10px 0;
+				background-color: #fff;
+				color: #656565;
+				font-style: normal;
+				text-shadow: 0 0 0;
+				-webkit-box-shadow: 0 1px 2px -1px #aaa;
+				-moz-box-shadow: 0 1px 2px -1px #aaa;
+				box-shadow: 0 1px 2px -1px #aaa;
+			}
+
+			a:hover {
+				background-color: #656565;
+				border-color: #656565;
+				border-color: #656565; 
+				color: #fff;
+			}
+
+			b {
+				background: #ffff88;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<h1>APIs</h1>
+		
+		<ul>
+			<li>
+				<p><a href="./json/?value=test&version=20.0&callback=foo">json</a> : returns the list of parameters sent in the query string as a JSON file</p>
+<pre><!--
+--><ol class="line-numbers"><!--
+--><li><code>http://api.neofyt.com/<b>json/?value=test&version=20.0&callback=foo</b></code></li><!--
+--></ol><!--
+--></pre>
+			</li>
+
+			<li>
+				<p><a href="./img/?300.150.558ed5.ffffff.text">img</a> : creating image placeholder by providing dimensions, colors and eventually text in the query</p>
+<pre><!--
+--><ol class="line-numbers"><!--
+--><li><code>http://api.neofyt.com/<b>img/?300.150.558ed5.ffffff.text</b><span class=code-comment> // Width.Height.Text color.Background color.Text (Text will be image size if parameter left empty)</span></code></li><!--
+--></ol><!--
+--></pre>
+			</li>
+
+			<li>
+				<p><a href="./jquery/?last">jquery</a> : get a specific version of jQuery by specifiyng the version number or get the last one</p>
+<pre><!--
+--><ol class="line-numbers"><!--
+--><li><code>http://api.neofyt.com/<b>jquery/?1.8.2</b><span class=code-comment> // Uncompressed version</span></code></li><!--
+--><li><code>http://api.neofyt.com/<b>jquery/?1.8.2-min</b><span class=code-comment> // Minified version</span></code></li><!--
+--><li><code>http://api.neofyt.com/<b>jquery/?last</b><span class=code-comment> // Always get the last version</span></code></li><!--
+--></ol><!--
+--></pre>
+			</li>
+
+		</ul>
+		
+	</body>
+</html>
